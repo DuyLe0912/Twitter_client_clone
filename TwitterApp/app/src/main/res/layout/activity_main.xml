@@ -4,17 +4,23 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/Tweet"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/lower_bar"
-        android:layout_below="@+id/upper_bar"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Tweet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/upper_bar"
+            android:layout_above="@id/lower_bar"
+            android:nestedScrollingEnabled="false">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
     <LinearLayout
         android:id="@+id/upper_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#F9F6EE">
+        android:background="#F9F6EE"
+        >
 
         <ImageView
             android:layout_width="match_parent"

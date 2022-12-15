@@ -31,6 +31,14 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         post.add("GRRR.");
         username.add("Dog 5");
         post.add("whatever man.");
+        username.add("Dog 5");
+        post.add("whatever man.");
+        username.add("Dog 5");
+        post.add("whatever man.");
+        username.add("Dog 5");
+        post.add("whatever man.");
+        username.add("Dog 5");
+        post.add("whatever man.");
 
         // set up the RecyclerView
         RecyclerView recyclerView = findViewById(R.id.Tweet);
