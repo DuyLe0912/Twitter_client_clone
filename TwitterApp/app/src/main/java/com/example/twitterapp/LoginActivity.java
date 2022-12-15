@@ -41,25 +41,29 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean validateinfo(String name, String pass) {
+        boolean flag = true;
         if (name.length() == 0){
             username.requestFocus();
             username.setError("Field can not be empty");
-            if (pass.length() == 0){
-                passfile.requestFocus();
-                passfile.setError("Field can not be empty");
-            }
-            return false;
+            flag = false;
         }
+
         else if(!name.matches("[a-zA-Z]+")){
             username.requestFocus();
             username.setError("Enter Only Alphabetical Character");
-            return false;
-        }else if(pass.length()<=5){
+            flag = false;
+        }
+        if (pass.length() == 0){
+            passfile.requestFocus();
+            passfile.setError("Field can not be empty");
+            flag = false;
+        }
+        else if(pass.length()<=5){
             passfile.requestFocus();
             passfile.setError("Minimum 6 character required");
-            return false;
+            flag = false;
         }
-        return true;
+        return flag;
     }
 
 }
